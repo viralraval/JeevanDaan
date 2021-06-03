@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>REGISTRATION FORM</title>
+	<link rel="stylesheet" type="text/css" href="CSS/reg.css">
+		<style>
+		
+		a{ text-decoration: none;
+			color: #03a9f4;
+			text-align: center;
+			padding: 15px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="form-wrap">
+		<form action="hosinsert.php" method="POST">
+			<h1>JEEVANDAAN</h1>
+			<h3>HOSPITAL REGISTRATION</h3>
+			<input type="text" name="hname" placeholder="Hospital Username" required>
+			<input type="text" name="hid" placeholder="Hospital ID" required>
+			<input type="email" name="email" placeholder="EMAIL ID" required>
+			<input type="number" minlength="1" name="phone" placeholder="Contact Number" required>
+			STATE :<br><br> <select name="state">
+				<option value="Maharashtra">Maharashtra</option>
+				<option value="Karnataka">Karnataka</option>
+				<option value="Jammu Kashmir">Jammu Kashmir</option>
+				<option value="Gujarat">Gujarat</option>
+				<option value="Uttar Pradesh">Uttar Pradesh</option>
+				<option value="Andhra Pradesh">Andhra Pradesh</option>
+				<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+				<option value="Goa">Goa</option>
+				<option value="Jharkhand">Jharkhand</option>
+				<option value="Himachal Pradesh">Himachal Pradesh</option>
+				<option value="Punjab">Punjab</option>
+				<option value="Tamil Nadu">Tamil Nadu</option>
+				<option value="Sikkim">Sikkim</option>
+				<option value="West Bengal">West Bengal</option>
+			</select>
+			<input type="text" name="addr" placeholder="FULL ADDRESS" required>			
+			<input type="text" minlength="1" name="rid" placeholder="ROHINI ID" required>
+			<input type="password" name="password_1" placeholder="Password" required>
+			<input type="password" name="password_2" placeholder="Re-Type Password" required>
+			<input type="submit" name="register" value="Submit" class="btn">
+			<input type="reset" name="reset" value="Reset" class="btn">
+		</form>
+		<p> Already a member?<a href="hlogin.php"> Sign in</a>
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-image: url(medi.jpg);
+	background-size: cover;
+}
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 50px;
+	background: rgba(0,0,0,.8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+
+.box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #FFF;
+	text-align: center;
+}
+
+.box .inputbox{
+	position: relative;
+}
+
+.box .inputbox input
+{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border:none;
+	border-bottom: 1px solid #FFF;
+	outline: none;
+	background: transparent; 
+}
+.box .inputbox label {
+position: absolute;
+top: 0;
+left: 0;
+padding: 10px 0;
+font-size: 16px;
+color: #FFF;
+pointer-events: none;
+transition: 0.75s;
+
+}
+
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label
+{
+	top: -20px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+
+.box input[type="submit"]
+{
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #FFF;
+	background: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	margin-bottom: 15px;
+
+}
+
+.lobox{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 500px;
+	padding: 50px;
+	background: rgba(0,0,0,.8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+.lobox .mox {
+	color: #FFF;
+	text-align: left;
+}
+.lobox input[type="submit"]
+{
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #FFF;
+	background: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	margin-bottom: 15px;
+
+}
+
+.lobox .komo {
+	background: url(certificate.png);
+	background-position: center;
+	background-size: contain;
+	height: 350px;
+	width: 500px;
+}
+
+.lotox a {
+	text-decoration: none;
+	color: #FFF;
+	text-align: center;
+	padding: 15px
+}

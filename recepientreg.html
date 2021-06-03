@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION FORM</title>
+	<link rel="stylesheet" type="text/css" href="CSS/reg.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+</head>
+<body>
+	<div class="form-wrap">
+			<form action="insertrec.php" method="POST" enctype="multipart/form-data">
+			<h1>JEEVANDAAN</h1>
+			<h3>RECEPIENT REGISTRATION FORM</h3>
+			<input type="text" name="rname" placeholder="Name" required>
+			<input type="number" minlength="1" name="ano" placeholder="Aadhaar Card Number" required>
+			<b>PLEASE SELECT RECIPIENT PHOTO :</b><br><br>
+			<input type="file" name="image" id="image" required>
+			<input type="number" minlength="1" name="pid" placeholder="PATIENT ID" required>			
+			<input type="number" minlength="1" name="hid" placeholder="HOSPITAL ID" required>
+			<b>Gender :</b><br><br> <select name="gender">
+				<option>Male</option>
+				<option>Female</option>
+				<option>Others</option>
+			</select>
+			<b>Blood Group :</b><br><br> <select name="blood">
+				<option>A+</option>
+				<option>B+</option>
+				<option>AB+</option>
+				<option>O+</option>
+				<option>O-</option>
+				<option>A-</option>
+				<option>B-</option>
+				<option>AB-</option>
+			</select>
+			<b>AGE :</b><br><br>
+			<input type="number" minlength="1" name="age" placeholder="Enter Age">
+				STATE :<br><br> <select name="state">
+				<option value="Maharashtra">Maharashtra</option>
+				<option value="Karnataka">Karnataka</option>
+				<option value="Jammu Kashmir">Jammu Kashmir</option>
+				<option value="Gujarat">Gujarat</option>
+				<option value="Uttar Pradesh">Uttar Pradesh</option>
+				<option value="Andhra Pradesh">Andhra Pradesh</option>
+				<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+				<option value="Goa">Goa</option>
+				<option value="Jharkhand">Jharkhand</option>
+				<option value="Himachal Pradesh">Himachal Pradesh</option>
+				<option value="Punjab">Punjab</option>
+				<option value="Tamil Nadu">Tamil Nadu</option>
+				<option value="Sikkim">Sikkim</option>
+				<option value="West Bengal">West Bengal</option>
+			</select>
+			<b>RECEPIENT IS REQUESTING FOR FOLLOWING ORGAN :</b><br><br>
+			<select name="organ">
+				<option value="LIVER">Liver</option>
+				<option value="KIDNEY">Kidney</option>
+				<option value="PANCREAS">Pancreas</option>
+				<option value="EYES">Eyes</option>
+				<option value="HEART">Heart</option>
+				<option value="LUNGS">Lungs</option>
+			</select>
+			
+
+			<input type="submit" name="insert" id="insert" value="Submit">
+			<input type="reset" name="" value="Reset">
+		</form>
+	</div>
+</body>
+</html>
+ <script>  
+ $(document).ready(function(){  
+      $('#insert').click(function(){  
+           var image_name = $('#image').val();  
+           if(image_name == '')  
+           {  
+                alert("Please Select Image");  
+                return false;  
+           }  
+           else  
+           {  
+                var extension = $('#image').val().split('.').pop().toLowerCase();  
+                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)  
+                {  
+                     alert('Invalid Image File');  
+                     $('#image').val('');  
+                     return false;  
+                }  
+           }  
+      });  
+ });  
+ </script>  
